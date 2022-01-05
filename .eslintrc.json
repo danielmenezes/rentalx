@@ -12,7 +12,7 @@
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": 13,
+    "ecmaVersion": 12,
     "sourceType": "module"
   },
   "plugins": [
@@ -22,6 +22,7 @@
   ],
   "rules": {
     "camelcase": "off",
+    "prettier/prettier": "error",
     "import/no-unresolved": "error",
     "@typescript-eslint/naming-convention": [
       "error",
@@ -53,6 +54,7 @@
     "import-helpers/order-imports": [
       "warn",
       {
+        // example configuration
         "newlinesBetween": "always",
         "groups": [
           "module",
@@ -73,15 +75,14 @@
       "error",
       {
         "devDependencies": [
-          "**/*.spec.js"
+          "**/*.spec.ts"
         ]
       }
-    ],
-    "prettier/prettier": "error"
+    ]
   },
-  "  sttings": {
-    "    import/resolver": {
-      "      typescript": {}
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
     }
   }
 }
